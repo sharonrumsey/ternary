@@ -1,5 +1,4 @@
 
-
 Interested in learning [Redux](https://www.udemy.com/react-redux/)?
 
 ###Getting Started###
@@ -24,4 +23,8 @@ Click (https://github.com/StephenGrider/ReactStarter/releases) then download the
 	> npm start
 ```
 let see
+
+
+# ReduxSimpleStarter
+work through online course on react redux using youtube api
 
