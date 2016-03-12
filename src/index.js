@@ -41,3 +41,15 @@ class App extends Component {
 	}
 }
 ReactDOM.render(<App />, document.querySelector('.container'));
+
+
+/****************************************
+react - js library used to produce html
+individual components or views
+snippets of code that produce html
+multiple different components
+nested -- returning jsx
+creating a new component that produces html
+then make sure it gets inside the DOM 
+*****************************************/
+
