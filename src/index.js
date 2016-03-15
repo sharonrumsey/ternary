@@ -4,6 +4,7 @@ import YTSearch from 'youtube-api-search';
 import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
+import _ from 'lodash';
 
 const API_KEY = 'AIzaSyDP1iobS0jf9j-cdl826gQMfuXEIc5nlmY';
 
@@ -16,7 +17,7 @@ class App extends Component {
 			selectedVideo: null 
 		};
 
-		this.videoSearch('surfboards');
+		this.videoSearch('ternary');
 	}
 
 	videoSearch(term) {
@@ -29,9 +30,11 @@ class App extends Component {
 	}
 
 	render() {
+		const videoSearch = _.debounce((term) => {this.videoSearch(term) }, 300)
+		
 		return (
 			<div>
-				<SearchBar onSearchTermChange={term => this.videoSearch(term)} />
+				
 				<VideoDetail video={this.state.selectedVideo} />
 				<VideoList 
 					onVideoSelect={selectedVideo => this.setState({selectedVideo})}
@@ -43,13 +46,4 @@ class App extends Component {
 ReactDOM.render(<App />, document.querySelector('.container'));
 
 
-/****************************************
-react - js library used to produce html
-individual components or views
-snippets of code that produce html
-multiple different components
-nested -- returning jsx
-creating a new component that produces html
-then make sure it gets inside the DOM 
-*****************************************/
 
