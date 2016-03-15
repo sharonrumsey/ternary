@@ -8,7 +8,8 @@
         "test":"mocha --compilers js:babel-core/register --require ./test/test_helper.js 'test/**/*.js'",
         "test:watch":"npm run test -- --watch"
     },
-    "author":"","license":"ISC",
+    "author":"Sharon R Rumsey",
+    "license":"ISC",
     "devDependencies":{
         "babel-core":"^6.2.1",
         "babel-loader":"^6.2.0",
